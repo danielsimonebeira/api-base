@@ -2,8 +2,12 @@ const execSQLQuery = require('../../create-tabela');
 const sql = require('../../create-tabela')
 
 exports.post = (req, res) => {
-   //const nome = req.body.nome.substring(0,150);
-   //console.log(nome);
+   const tarefa = {}
+   tarefa.id = req.params['id']
+   tarefa.nome = req.body;
+
+   console.log(tarefa.id);
+   console.log(tarefa.nome);
    execSQLQuery(`INSERT INTO usuarios (NOME) VALUES('${nome}');`, res.status(201));
    // res.status(201).send('Rota POST!');
  };
