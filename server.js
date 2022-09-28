@@ -5,4 +5,6 @@ require('./src/Routes/index')(app);
 
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json());
 app.listen(3333);
