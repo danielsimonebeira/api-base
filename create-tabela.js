@@ -9,21 +9,21 @@ function execSQLQuery(sqlQuery, res) {
         password: 'Ds123##',
         database: 'cesusc'
     });
-/*
+
     connection.connect((erro) => {
         if(erro) return console.log(erro);
         console.log('conectado');
         createTable(connection);
         adicionaLinhas(connection);    
     });
-*/
+
     connection.query(sqlQuery, (error, results, fields) => {
         if (error) {
             res.json(results);
         } else {
             res.json(results);
             connection.end;
-            console.log('Consulta GET executada!');
+            console.log('Operação executada com sucesso!');
             
         }
     }); 
